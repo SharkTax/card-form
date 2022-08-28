@@ -1,0 +1,318 @@
+	*{
+  		padding: 0;
+  		margin: 0;
+  		box-sizing: border-box;
+  	}
+  	:root{
+  		--fontNaturalSize:18px;
+  		--White: hsl(0, 0%, 100%);
+  		--LightgrayishvioletInp: hsl(270, 3%, 87%);
+  		--DarkgrayishvioletNotUse: hsl(279, 6%, 55%);
+  		--VerydarkvioletBtn: hsl(278, 68%, 11%);
+  		--Lineargradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  		--RedInpErrors: hsl(0, 100%, 66%);
+  	}
+ body{
+          font-weight: 500;
+          
+  	}
+  	
+#bodySet{
+  		display: flex;
+  		position: relative;
+  		height: 100vh;
+  		align-items: center;
+  	}
+ #bodySet > img{
+  		position: absolute ;
+  		height: 100%;
+		width: 35%;
+
+  	}
+  
+  #form{
+  	height: 80%;
+  	position: relative;
+  	align-items: center;
+  	margin: 0 0 0 25%;
+  	display: flex;
+  	justify-content: space-between;
+  	gap: 6rem;
+  	width: 90%;
+  }
+  /* CARDS SIDE*/
+  #form #cards{
+  	height: 90%;
+  	width: 90%;
+		gap: 1.4rem;
+  	display: flex;
+  	flex-direction: column;
+  }
+  
+  /* PURPLE CARD*/
+  #pupleCard{
+  	position: relative;
+ 		width: 100%;
+  	height: 50%;
+ 		right: 3rem;
+ 		
+  }
+  #pupleCard > img{
+  	top: 0;
+  	height: 100%;
+ 		width: 100%;
+  position: absolute;
+ 
+  	
+  }
+  #purpleCardContent{
+  	position: relative;
+  	padding: 1.5rem;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  #purpleCardContent h3{
+  	font-size: 1.5rem;
+  	letter-spacing: 3px;
+  	text-align: center;
+  	margin-top: 4rem;
+  	color: var(--White);
+  }
+ 
+  #purpleCardContent img{
+  	height: 23%;
+  }
+  
+  #purpleCardContent #purpleCardContentNameDate{
+  	display: flex;
+  	margin-top: 1rem;
+  	justify-content: space-between;
+  	font-size: 18px;
+  	color: var(--White);
+
+  }
+  #purpleCardContent #purpleCardContentNameDate span{
+      font-size: 1.3rem;
+  }
+  
+  #purpleCardContent #purpleCardContentNameDate h2{
+      font-size: 1.3rem;
+  }
+  /* GREY CARD */
+  #greyCard{
+  	
+  	height: 50%;
+  	position: relative;
+  }
+  
+  #greyCard > img{
+  	width: 100%;
+  	height: 100%;
+  	position: absolute;
+  }
+  
+  #greyCard h2{
+  	position: absolute;
+  	margin: 6.8rem 0 0 23rem;
+  	color: var(--White);
+  }
+  
+  /* INPUT SECTION */
+  #inpSection{
+      display: flex;
+      flex-direction: column;
+      gap:2rem;
+      align-items: center;
+      width: 70%;
+  }
+  
+  #inpSection label{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      color: var(--VerydarkvioletBtn);
+      font-size: .7rem;
+      
+  }
+   #inpSection label input{
+       height: 2.6rem;
+       width: 90%;
+       margin-top: 4px;
+       border: 2px solid var(--LightgrayishvioletInp);
+       border-radius: .3rem;
+       padding: 0 0 0 1rem;
+   }
+   #datesinp{
+       display: grid;
+       grid-template-columns: 50% 50%;
+   }
+   
+   #inpSection button{
+       width: 90%;
+       border: transparent;
+       height:2.6rem ;
+       background: var(--VerydarkvioletBtn);
+       color: var(--White);
+       font-weight: 500;
+       border-radius: .3rem;
+   }
+   #datesinp #smallInput{
+       margin: 0 0 0 .3rem;
+   }
+   #datesinp #smallInput div{
+       display: flex;
+       flex-direction: row;
+   }
+   
+   #datesinp #cvc input{
+       width: 80%;
+   }
+   #datesinp #smallInput div input{
+       width: 37%;
+       margin: 4px .4rem 0 0;
+   }
+   
+   
+   /*ERROR MESSAGE*/
+   #inpSection label h6{
+       color: var(--RedInpErrors);
+       display: none;
+   }
+   /* INPUT ERROR */
+   .inpErr{
+       border: 2px solid var(--RedInpErrors);
+   }
+   /* SUCCESS MESSAGE*/
+   .success{
+       border: 2px solid var(--VerydarkvioletBtn);
+   }
+  #completedCard{
+  display: none;
+  	position: absolute;               
+  	top: 33%;  
+  	left: 60%;
+  	text-align: center;
+  	background: var(--White);
+  	border-radius: .3rem;
+  
+  	width: 40%;
+  }
+  #completedCard img{
+      margin-top: 1.3rem;
+  }
+  #completedCard h2{
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--VerydarkvioletBtn);
+      margin-top: 1rem;
+  }
+  
+  #completedCard span{
+      font-size: .7rem;
+      color: var(--LightgrayishvioletInp);
+  }
+  
+  #completedCard > button{
+      width: 90%;
+      height: 2.6rem;
+      border: transparent;
+      background: var(--VerydarkvioletBtn);
+      color: var(--White);
+      font-size: 1.3rem;
+      font-weight: 500;
+      border-radius: 0.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+  }
+  @media screen and (max-width: 600px){
+  	#bodySet{
+  		background: url("./images/bg-main-mobile.png");
+  		background-repeat: no-repeat;
+  		background-size: 100% 30%;
+  	}
+  	
+  	#bodySet > img{
+  		display: none;
+  		
+  	}
+  	
+  	#form{
+  	margin: 0;
+  	
+ 		flex-direction: column;
+ 		height: 100%;
+ 		width: 100%;
+  	}
+  	#form #cards{
+  		gap: 0;
+  		width: 90%;
+  		height: 100%;
+ 			position: relative;
+  	}
+  	
+  	#pupleCard{
+  		top: 45%;
+  		left: 0;
+  		position: absolute;
+  		right: 0;
+  	  z-index: 3;
+  		width: 70%;
+  		height: 50%;
+  	}
+  	
+  	#pupleCard #purpleCardContent{
+  		padding: .5rem;
+  	}
+    #purpleCardContent img{
+  	height: 25%;
+  	position: absolute;
+  }
+  	#purpleCardContent h3{
+  		margin-top: 5rem;
+  		font-size: 1rem;
+  	}
+  	
+  #purpleCardContent #purpleCardContentNameDate{
+  	margin-top: .8rem;
+  }
+  	
+  	#purpleCardContent	#purpleCardContentNameDate span{
+  		font-size: .5rem;
+  	}
+  	#purpleCardContent	#purpleCardContentNameDate h2{
+  		font-size: .5rem;
+  	}
+  	
+  	#greyCard{
+  	position: absolute;
+  		width: 70%;
+  		height: 50%;
+  		top: 10%;
+  		right: 0;
+  	}
+  	#greyCard h2{
+  		font-size: 1rem;
+  		margin:4.5rem 0 0 11rem;
+  	}
+  	
+  	#inpSection{
+  		width: 100%;
+			
+  	}
+  	#inpSection label{
+  		width: 90%;
+  	}
+  	#inpSection label input{
+  		width: 100%;
+  	}
+  	#datesinp #smallInput{
+  		align-items: center;
+  		margin: 0 0 0 1.3rem;
+  	}
+  	#datesinp #cvc input{
+  		width: 100%;
+  	}
+  }
+

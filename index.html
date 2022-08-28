@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bodySet">
+	<img src="./images/bg-main-desktop.png">
+
+<form action="#" id="form">
+	<div id="cards">
+		<div id="pupleCard">
+			<img src="./images/bg-card-front.png">
+			<div id="purpleCardContent">
+				<img src="./images/card-logo.svg">
+  			<h3>0000 0000 0000 0000</h3>
+  			<div id="purpleCardContentNameDate">
+  			<span>Jane Appleseed</span>
+  			<h2><small id="dayInCard">00</small>/<small id="monthInCard">00</small></h2>
+  			</div>
+  		</div>
+		</div>
+		
+		<div id="greyCard">
+			<img src="./images/bg-card-back.png">
+			
+ 	 		<h2>000</h2>
+		</div>
+	</div>
+	
+	<div id="inpSection">
+	<label>
+		Cardholder Name
+  	<input type="text" placeholder="e.g. Jane Appleseed" required id="inpName">
+	</label>
+
+	<label>
+		
+  Card Number
+  <input type="number" id="inpNumberCard" placeholder="e.g. 1234 5678 9123 0000">
+	</label>
+
+
+	<div id="datesinp">
+		<label id="smallInput">
+   Exp. Date (MM/YY)
+   <div>
+   	<input type="number" placeholder="MM" required>
+   <input type="number" placeholder="YY" required>
+   </div>
+   
+  </label>
+
+	<label id="cvc">
+		CVC
+  <input type="number" placeholder="e.g. 123" required>
+	</label>
+  
+ </div>
+  <button type="submit" id="btnsub">Confirm</button>
+</div>
+</form>
+  <div id="completedCard">
+  Thank you!
+  We've added your card details
+  Continue
+  </div>
+</div>
+  <!-- Completed state start -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/SharkTax">SharkTax</a>.
+  </div>
+</body>
+</html>
